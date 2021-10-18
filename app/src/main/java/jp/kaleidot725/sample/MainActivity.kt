@@ -1,6 +1,7 @@
 package jp.kaleidot725.sample
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,13 +26,15 @@ class MainActivity : ComponentActivity() {
         val database = Database(driver)
 
         val playerQueries: PlayerQueries = database.playerQueries
-        println(playerQueries.selectAll().executeAsList())
 
         playerQueries.insert(player_number = 10, full_name = "Corey Perry")
         println(playerQueries.selectAll().executeAsList())
 
         val player = HockeyPlayer(10, "Ronald McDonald")
         playerQueries.insertFullPlayerObject(player)
+
+        val players = playerQueries.selectAll().executeAsList()
+        Toast.makeText(applicationContext, players.toString(), Toast.LENGTH_SHORT).show()
     }
 }
 
