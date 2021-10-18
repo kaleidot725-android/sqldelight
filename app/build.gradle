@@ -1,13 +1,14 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.android' version "1.5.31"
+    id 'com.squareup.sqldelight'
 }
 
 android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "jp.kaleidot725.sqldelight"
+        applicationId 'jp.kaleidot725.sample'
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -46,7 +47,6 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
@@ -58,4 +58,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation "com.squareup.sqldelight:android-driver:1.5.2"
 }

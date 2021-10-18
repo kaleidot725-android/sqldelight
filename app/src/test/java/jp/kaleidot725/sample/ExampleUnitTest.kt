@@ -1,4 +1,4 @@
-package jp.kaleidot725.sqldelight
+package jp.kaleidot725.sample
 
 import org.junit.Test
 

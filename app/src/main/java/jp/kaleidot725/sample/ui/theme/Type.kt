@@ -1,4 +1,4 @@
-package jp.kaleidot725.sqldelight.ui.theme
+package jp.kaleidot725.sample.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
